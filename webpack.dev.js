@@ -98,12 +98,12 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'src/assets/templates/index.html',
-      title: 'Lab Net Test.'
+      template: 'src/assets/html/index.html',
+      title: 'Cat Energy'
     }),
     new CopyWebpackPlugin([
       { 
-        from: './src/assets/images', 
+        from: './public/images', 
         to: 'images'
       },
       { 
