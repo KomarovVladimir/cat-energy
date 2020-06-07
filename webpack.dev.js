@@ -98,7 +98,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'src/assets/html/index.html',
+      template: 'public/html/index.html',
       title: 'Cat Energy'
     }),
     new CopyWebpackPlugin([
@@ -106,10 +106,10 @@ const config = {
         from: './public/images', 
         to: 'images'
       },
-      { 
-        from: './src/assets/favicon.ico', 
-        to: './'
-      }
+      // { 
+      //   from: './src/assets/favicon.ico', 
+      //   to: './'
+      // }
     ]),
     new webpack.ProvidePlugin({
         $: "jquery",
