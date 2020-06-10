@@ -103,8 +103,8 @@ const config = {
     }),
     new CopyWebpackPlugin([
       { 
-        from: './public/images', 
-        to: 'images'
+        from: 'public/media/images', 
+        to: 'media/images'
       },
       // { 
       //   from: './src/assets/favicon.ico', 
