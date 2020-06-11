@@ -72,10 +72,14 @@
         min-width: 3.2rem;
         margin-right: 1.5rem;
 
+        &:before,
         &:after {
             content: "";
             position: absolute;
             display: inline-block;
+        }
+
+        &:after {
             top: 0;
             left: 0;
             height: 100%;
@@ -86,9 +90,6 @@
         }
 
         &:before {
-            content: "";
-            position: absolute;
-            display: inline-block;
             top: 50%;
             left: 50%;
             height: 90%;
