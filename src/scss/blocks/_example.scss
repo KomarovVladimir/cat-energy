@@ -109,11 +109,7 @@
 
     &__label {
         display: inline-block;
-        margin: 0 2rem;
-    }
-
-    &__checkbox {
-        display: none;
+        margin: 0 1.5rem;
     }
 
     &__switch {
@@ -141,6 +137,15 @@
             width: 2.5rem;
             background-color: $green;
             border-radius: .2rem;
+        }
+    }
+
+    &__checkbox {
+        display: none; 
+
+        &:checked ~ .example__switch::after{
+            left: unset;
+            right: .2rem;
         }
     }
 }
