@@ -1,5 +1,31 @@
 .header {
+    position: sticky;
+    top: 0;
+    padding: 1rem 0;
+    background-color: $white;
+    z-index: 1000;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: inline-block;
+    }
+
     &__mobile-logo {
-        display: block;
+        display: inline-block;
+    }
+
+    &__mobile-button {
+        height: 1.5rem;
+        width: 1.5rem;
+        border: none;
+        background-color: transparent;
+        background-image: url("../../public/media/images/mobile-menu.svg");
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
