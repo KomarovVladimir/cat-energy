@@ -131,7 +131,6 @@
             position: absolute;
             display: block;
             top: 50%;
-            left: .2rem;
             transform: translateY(-50%);
             height: .4rem;
             width: 2.5rem;
@@ -143,8 +142,11 @@
     &__checkbox {
         display: none; 
 
+        &:not(:checked) ~ .example__switch::after{
+            left: .2rem;
+        }
+
         &:checked ~ .example__switch::after{
-            left: unset;
             right: .2rem;
         }
     }
