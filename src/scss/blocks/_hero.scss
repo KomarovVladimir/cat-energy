@@ -24,7 +24,6 @@
     &__container {
         display: flex;
         flex-direction: column;
-        align-items: center;
         padding-top: 2rem;
     }
 
@@ -36,9 +35,13 @@
     &__subtitle {
         margin-bottom: 2rem;
         font-size: 1rem;
-        
         color: inherit;
         text-align: center;
+    }
+
+    &__picture-container {
+        position: relative;
+        margin-bottom: 1.5rem;
     }
 
     &__image {
@@ -48,107 +51,43 @@
     }
 
     &__button {
-        margin-bottom: 1.5rem;
-    }
-
-    &__card {
         display: block;
-        padding: 1.6rem 1.4rem;
-        background-color: $gray-light;
-
-        &:not(:last-child) {
-            margin-bottom: 1.25rem;
-        }
     }
+}
 
-    &__card-title {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.6rem;
-        font-size: 1.5rem;
+@media screen and (min-width: $sm) {
+    .hero {
         color: $black;
-    }
-
-    &__card-icon {
-        position: relative;
-        display: inline-block;
-        min-height: 3.2rem;
-        min-width: 3.2rem;
-        margin-right: 1.5rem;
-
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            display: inline-block;
+        text-align: left;
+        
+        &:before {
+            background: none;
+        }
+        
+        &__container {
+            align-items: flex-start;
+            padding-top: 3rem;
+            margin-left: 7rem;
+            padding-left: 0;
+            min-width: 10rem;
         }
 
-        &:after {
+        &__h1 {
+            width: 100%;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+    
+        &__subtitle {
+            width: 100%;
+            font-size: 1.5rem;
+            text-align: left;
+        }
+
+        &__button {
+            position: absolute;
             top: 0;
             left: 0;
-            height: 100%;
-            width: 100%;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        &:before {
-            top: 50%;
-            left: 50%;
-            height: 90%;
-            width: 90%;
-            transform: translate(-50%, -50%);
-            background-color: $green;
-            border-radius: 50%;
-        }
-    }
-
-    &__card-icon_diet {
-        &:after {
-            background-image: url("../../public/media/images/cat-diet.svg");
-        }
-    }
-
-    &__card-icon_fit {
-        &:after {
-            background-image: url("../../public/media/images/cat-fit.svg");
-        }
-    }
-
-    &__card-content {
-        padding-bottom: 1.5rem;
-        margin-bottom: 1.5rem;
-        color: $black-light;
-        border-bottom: 1px solid $gray;
-    }
-
-    &__card-link {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: $black;
-
-        &:after {
-            content: "";
-            display: inline-block;
-            height: .8rem;
-            width: 2.1rem;
-            margin-left: .6rem;
-            background-image: url("../../public/media/images/right-arrow-long.svg");
-            background-size: auto;
-            background-repeat: no-repeat;
-            background-position: 0 center;
-        }
-
-        &:hover {
-            &:after {
-                background-image: url("../../public/media/images/right-arrow-verylong.svg");
-            }
-        }
-
-        &:active {
-            opacity: 0.3;
         }
     }
 }

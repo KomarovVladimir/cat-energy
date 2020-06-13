@@ -1,0 +1,106 @@
+.categories { 
+    font-family: $oswald;
+    font-weight: 400;
+    line-height: 1;
+    
+    &__card {
+        display: block;
+        padding: 1.6rem 1.4rem;
+        background-color: $gray-light;
+
+        &:not(:last-child) {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+        font-size: 1.5rem;
+        color: $black;
+    }
+
+    &__icon {
+        position: relative;
+        display: inline-block;
+        min-height: 3.2rem;
+        min-width: 3.2rem;
+        margin-right: 1.5rem;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+        }
+
+        &:after {
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:before {
+            top: 50%;
+            left: 50%;
+            height: 90%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            background-color: $green;
+            border-radius: 50%;
+        }
+    }
+
+    &__icon_diet {
+        &:after {
+            background-image: url("../../public/media/images/cat-diet.svg");
+        }
+    }
+
+    &__icon_fit {
+        &:after {
+            background-image: url("../../public/media/images/cat-fit.svg");
+        }
+    }
+
+    &__content {
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: $black-light;
+        border-bottom: 1px solid $gray;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $black;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            height: .8rem;
+            width: 2.1rem;
+            margin-left: .6rem;
+            background-image: url("../../public/media/images/right-arrow-long.svg");
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: 0 center;
+        }
+
+        &:hover {
+            &:after {
+                background-image: url("../../public/media/images/right-arrow-verylong.svg");
+            }
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}
