@@ -143,11 +143,62 @@
         display: none; 
 
         &:not(:checked) ~ .example__switch::after{
-            left: .2rem;
+            left: .3rem;
         }
 
         &:checked ~ .example__switch::after{
-            right: .2rem;
+            right: .3rem;
+        }
+    }
+}
+
+@media screen and (min-width: $sm) {
+    .example {
+        &__values {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__counters {
+            width: 50%;
+        }
+
+        &__expenses {
+            width: 9rem;
+            text-align: right;
+        }
+
+        &__window {
+            height: 31rem;
+        }
+
+        &__switch {
+            position: relative;
+            display: inline-block;
+    
+            &:before {
+                content: "";
+                display: block;
+                height: .5rem;
+                width: 26rem;
+                border-radius: .4rem;
+                background-color: $gray;
+                border: none;
+            }
+    
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 50%;
+                transform: translateY(-50%);
+                height: .5rem;
+                width: .5rem;
+                border: .8rem solid $white;
+                background-color: $green;
+                border-radius: 50%;
+            }
         }
     }
 }
