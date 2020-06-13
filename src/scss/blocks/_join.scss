@@ -11,7 +11,7 @@
 
     &__item {
         display: block;
-        width: 50%;
+        width: 45%;
     }
 
     &__map {
@@ -19,5 +19,17 @@
         display: block;
         background-color: $gray;
         height: 20rem;
+    }
+}
+
+@media screen and (min-width: $sm) {
+    .join {
+        &__container {
+            padding: 0 8rem;
+        }
+
+        &__item {
+            width: 25%;
+        }
     }
 }

@@ -154,6 +154,8 @@
 
 @media screen and (min-width: $sm) {
     .example {
+        background: linear-gradient(to bottom, #fff 55%, #f2f2f2 45%);
+
         &__values {
             display: flex;
             justify-content: space-between;
@@ -164,8 +166,17 @@
             width: 50%;
         }
 
+        &__counter-value {
+            font-size: 2rem;
+        }
+
+        &__counter-label {
+            background-color: $white;
+        }
+
         &__expenses {
-            width: 9rem;
+            width: 14rem;
+            font-size: 1.5rem;
             text-align: right;
         }
 
