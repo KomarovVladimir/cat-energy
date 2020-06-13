@@ -10,7 +10,7 @@
         position: absolute;
         display: block;
         width: 100%;
-        height: 35%;
+        height: 65%;
         top: 0;
         left: 0;
         background-image: url("../../public/media/images/index-background-mobile.png");
@@ -47,6 +47,7 @@
     &__image {
         display: block;
         width: 100%;
+        margin: 0 auto;
         height: auto;
     }
 
@@ -63,17 +64,18 @@
         &:before {
             background: none;
         }
-
-        &__container {
-            min-height: 810px;
-        }
         
         &__container {
             align-items: flex-start;
+            min-height: 810px;
             padding-top: 3rem;
             margin-left: 7rem;
             padding-left: 0;
             min-width: 10rem;
+        }
+
+        &__title {
+            max-width: 18rem;;
         }
 
         &__h1 {
@@ -90,7 +92,8 @@
 
         &__image {
             position: absolute;
-            width: calc(100% - 4rem);
+            max-width: 709px;
+            top: 11rem;
             left: 50%;
             transform: translateX(-50%);
             z-index: -1;
