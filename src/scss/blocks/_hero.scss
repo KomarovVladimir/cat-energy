@@ -63,6 +63,10 @@
         &:before {
             background: none;
         }
+
+        &__container {
+            min-height: 810px;
+        }
         
         &__container {
             align-items: flex-start;
@@ -84,10 +88,12 @@
             text-align: left;
         }
 
-        &__button {
+        &__image {
             position: absolute;
-            top: 0;
-            left: 0;
+            width: calc(100% - 4rem);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
         }
     }
 }
