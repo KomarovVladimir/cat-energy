@@ -72,3 +72,11 @@
         }
     }
 }
+
+@media screen and (min-width: $md) {
+    .header {
+        position: fixed;
+        width: 100%;
+        background-color: transparent;
+    }
+}

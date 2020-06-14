@@ -100,3 +100,32 @@
         }
     }
 }
+
+@media screen and (min-width: $md) {
+    .hero {
+        background-image: url("../../public/media/images/index-background-desktop.png");
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+
+        &__container {
+            justify-content: center;
+            padding-top: 0;
+            margin-left: 10%;
+        }
+
+        &__title {
+            max-width: 26rem;
+        }
+
+        &__h1 {
+            font-size: 3.75rem;
+        }
+
+        &__image {
+            position: absolute;
+            left: 60%;
+            z-index: 1;
+        }
+    }
+}
