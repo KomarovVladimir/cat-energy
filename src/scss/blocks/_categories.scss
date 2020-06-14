@@ -142,10 +142,26 @@
         
         &__card {
             width: calc(50% - 4rem);
+            margin-left: 2rem;
+            margin-right: 2rem;
+            box-sizing: border-box;
 
             &:not(:last-child) {
                 margin-bottom: 0;
             }
+        }
+
+        &__icon {
+            position: relative;
+            min-height: 6.25rem;
+            min-width: 6.25rem;
+            top: 0;
+            margin-right: 3rem;
+            transform: none;
+        }
+
+        &__text {
+            padding-bottom: 0.5rem;
         }
     }
 }
