@@ -1,4 +1,5 @@
 .example {
+    position: relative;
     padding: 2rem 0;
     font-family: Arial, sans-serif;
     font-size: 1rem;
@@ -65,6 +66,7 @@
          height: 16rem;
          width: 100%;
          margin-bottom: 2.5rem;
+         overflow: hidden;
      }
 
      &__picture {
@@ -156,6 +158,10 @@
     .example {
         background: linear-gradient(to bottom, #fff 55%, #f2f2f2 45%);
 
+        &__section {
+            margin-bottom: 0;
+        }
+
         &__values {
             display: flex;
             justify-content: space-between;
@@ -210,6 +216,59 @@
                 background-color: $green;
                 border-radius: 50%;
             }
+        }
+    }
+}
+
+@media screen and (min-width: $md) {
+    .example {
+        padding-top: 0;
+        padding-bottom: 4.5rem;
+        background: linear-gradient(to bottom, #fff 22%, #f2f2f2 22%);
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        &__content {
+            width: 35%;
+        }
+
+        &__h2 {
+            position: absolute;
+            top: 0;
+            left: 4rem;
+        }
+
+        &__p {
+            margin-bottom: 4rem;
+            line-height: 1.4;
+        }
+
+        &__values {
+            flex-wrap: wrap;
+        }
+
+        &__counters {
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+
+        &__counter-label {
+            width: fit-content;
+            bottom: -0.5rem;
+            background-color: $gray-light;
+        }
+
+        &__expenses {
+            width: fit-content;
+            margin-bottom: 0;
+        }
+
+        &__comparison {
+            width: 50%;
         }
     }
 }

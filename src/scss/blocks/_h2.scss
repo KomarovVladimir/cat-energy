@@ -6,3 +6,9 @@
     line-height: 1;
     color: $black;
 }
+
+@media screen and (min-width: $md) {
+    .h2 {
+        font-size: 3.75rem;
+    }
+}

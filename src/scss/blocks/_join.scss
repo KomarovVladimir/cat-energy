@@ -1,8 +1,10 @@
 .join {
+    position: relative;
+    
     &__header {
         display: flex;
-        margin-bottom: 2rem;
         justify-content: space-between;
+        padding: 2rem 0;
     }
 
     &__h3 {
@@ -24,12 +26,44 @@
 
 @media screen and (min-width: $sm) {
     .join {
+        &__item {
+            width: 25%;
+        }
+    }
+}
+
+@media screen and (min-width: $md) {
+    .join {
+        &__section {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: $lg) {
+    .join {
+        
         &__container {
             padding: 0 8rem;
         }
 
+        &__header {
+            position: absolute;
+            top: 50%;
+            left: 4rem;
+            transform: translateY(-50%);
+            max-width: 50%;
+            padding: 4rem 6rem;
+            background-color: $white;
+            box-sizing: border-box;
+        }
+
         &__item {
-            width: 25%;
+            width: 50%;
+        }
+
+        &__map {
+            height: 40rem;
         }
     }
 }

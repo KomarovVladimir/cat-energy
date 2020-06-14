@@ -7,3 +7,9 @@
     color: $white;
     text-align: center;
 }
+
+@media screen and (min-width: $lg) {
+    .h1 {
+        font-size: 4rem;
+    }
+}
