@@ -27,6 +27,11 @@
         padding-top: 2rem;
     }
 
+    &__title {
+        position: relative;
+        z-index: 100;
+    }
+
     &__h1 {
         margin-bottom: 1.5rem;
         color: inherit;
@@ -101,10 +106,10 @@
     }
 }
 
-@media screen and (min-width: $md) {
+@media screen and (min-width: $lg) {
     .hero {
         background-image: url("../../public/media/images/index-background-desktop.png");
-        background-size: 50% 100%;
+        background-size: auto 100%;
         background-repeat: no-repeat;
         background-position-x: 100%;
 
