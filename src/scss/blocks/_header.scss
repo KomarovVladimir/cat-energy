@@ -1,0 +1,92 @@
+.header {
+    position: sticky;
+    top: 0;
+    padding: 1rem 0;
+    background-color: $white;
+    z-index: 1000;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__mobile-logo {
+        display: inline-block;
+    }
+
+    &__mobile-button {
+        height: 1.5rem;
+        width: 1.5rem;
+        border: none;
+        background-color: transparent;
+        background-image: url("../../public/media/images/mobile-menu.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__nav-item {
+        position: relative;
+        display: inline-block;
+        font-family: $oswald;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1;
+        color: $black;
+        text-decoration: none;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        &:hover {
+            &:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: -0.5rem;
+                left: 0;
+                background-color: $green;
+            }
+        }
+    }
+
+    &__mobile-hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: $sm) {
+    .header {
+        &__mobile-shown {
+            display: none;
+        }
+
+        &__mobile-hidden {
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: $lg) {
+    .header {
+        position: fixed;
+        width: 100%;
+        background-color: transparent;
+
+        &__nav-item {
+            color: $white;
+    
+            &:hover {
+                &:after {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
