@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
@@ -103,29 +103,25 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'src/assets/templates/index.html',
-      title: 'Construction Co.'
+      template: 'public/html/index.html',
+      title: 'Cat Energy'
     }),
     new CopyWebpackPlugin([
       { 
-        from: './src/assets/images/public', 
-        to: 'images'
+        from: 'public/media/images', 
+        to: 'media/images'
       },
-      { 
-        from: './src/assets/favicon.ico', 
-        to: './'
-      }
     ]),
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery",
-      "window.$": "jquery"
-    }),
+    // new webpack.ProvidePlugin({
+    //   $: "jquery",
+    //   jQuery: "jquery",
+    //   "window.jQuery": "jquery",
+    //   "window.$": "jquery"
+    // }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
-    new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin()
   ],
   optimization: {
     runtimeChunk: 'single',

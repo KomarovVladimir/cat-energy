@@ -106,17 +106,13 @@ const config = {
         from: 'public/media/images', 
         to: 'media/images'
       },
-      // { 
-      //   from: './src/assets/favicon.ico', 
-      //   to: './'
-      // }
     ]),
-    new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery",
-        "window.$": "jquery"
-    }),
+    // new webpack.ProvidePlugin({
+    //     $: "jquery",
+    //     jQuery: "jquery",
+    //     "window.jQuery": "jquery",
+    //     "window.$": "jquery"
+    // }),
     // new BundleAnalyzerPlugin()
   ],
   optimization: {
