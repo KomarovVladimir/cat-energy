@@ -85,7 +85,7 @@
 
         &__item {
             display: block;
-            width: 42%;
+            width: calc(50% - 2rem);
             margin-bottom: 6.5rem;
         }
 
@@ -96,7 +96,7 @@
         &__number {
             display: block;
             position: absolute;
-            right: 0;
+            right: 2rem;
             top: -1rem;
             font-family: $oswald;
             font-weight: 400;
@@ -115,12 +115,7 @@
         }
 
         &__item {
-            width: 25%;
-            padding-left: 2rem;
-            padding-right: 2rem;
-            margin-left: -2rem;
-            margin-right: -2rem;
-            box-sizing: border-box;
+            width: calc(25% - 4rem);
         }
     }
 }
