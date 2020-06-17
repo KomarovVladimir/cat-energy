@@ -7,8 +7,9 @@
     }
 
     &__social {
-        display: inline-flex;
+        display: flex;
         justify-content: center;
+        width: 100%;
         padding-top: 2rem;
         padding-bottom: 2rem;
         border-top: 1px solid $gray-light;
@@ -37,6 +38,7 @@
         &__social {
             padding: 0;
             border-top: none;
+            width: fit-content;
         }
     }
 }

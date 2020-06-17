@@ -60,6 +60,10 @@
         text-align: center;
      }
 
+     &__price {
+         white-space: nowrap;
+     }
+
      &__comparison {
          display: flex;
          flex-direction: column;
