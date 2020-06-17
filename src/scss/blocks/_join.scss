@@ -46,18 +46,31 @@
 
 @media screen and (min-width: $lg) {
     .join {
+        &__container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1300px;
+            padding: 0;
+        }
+
         &__header {
+            display: flex;
+            justify-content: space-between;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            max-width: 32rem;
+            width: 50%;
             padding: 4rem 6rem;
             background-color: $white;
             box-sizing: border-box;
         }
 
         &__item {
-            width: 50%;
+            width: calc(50% - 2rem);
+            padding: 0;
         }
 
         &__map {
