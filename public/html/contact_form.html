@@ -35,47 +35,67 @@
                 <form action="" class="form">
                     <fieldset class="form__fieldset">
                         <div class="form__label-wrapper">
-                            <label for="name" class="form__label">Имя:*</label>
+                            <label for="name" class="form__label">ИМЯ*:</label>
                             <input type="text" id="name" class="form__field">
                         </div>
                         <div class="form__label-wrapper">
-                            <label for="weight" class="form__label">Вес (кг):*</label>
+                            <label for="weight" class="form__label">ВЕС (КГ):</label>
                             <input type="text" id="weight" class="form__field">
                         </div>
                         <div class="form__label-wrapper">
-                            <label for="age" class="form__label">Возраст (лет):</label>
+                            <label for="age" class="form__label">ВОЗРАСТ (ЛЕТ):</label>
                             <input type="text" id="age" class="form__field">
                         </div>
                     </fieldset>
                     <fieldset class="form__fieldset">
                         <div class="form__label-wrapper">
                             <input name="type" type="radio" id="diet" class="form__radio">
-                            <label for="diet" class="form__radio-label"><span class="form__radio-checkbox"></span> ПОХУДЕНИЕ</label>
+                            <label for="diet" class="form__check-label"><span class="form__radio-icon"></span> ПОХУДЕНИЕ</label>
                         </div>
                         <div class="form__label-wrapper">
                             <input name="type" type="radio" id="fitness" class="form__radio">
-                            <label for="fitness" class="form__radio-label"><span class="form__radio-checkbox"></span> НАБОР МАССЫ</label>
+                            <label for="fitness" class="form__check-label"><span class="form__radio-icon"></span> НАБОР МАССЫ</label>
                         </div>
                         <div class="form__label-wrapper">
                             <input name="type" type="radio" id="advice" class="form__radio">
-                            <label for="advice" class="form__radio-label"><span class="form__radio-checkbox"></span> НЕ ЗНАЮ (НУЖЕН ВАШ СОВЕТ)</label>
+                            <label for="advice" class="form__check-label"><span class="form__radio-icon"></span> НЕ ЗНАЮ (НУЖЕН ВАШ СОВЕТ)</label>
                         </div>
                     </fieldset>
                     <fieldset class="form__fieldset">
                         <span class="form__legend"><span class="form__legend-text">Контактные данные (хозяина кота)</span></span>
-                        <label class="form__label">
-                            <input type="email" class="form__field form__field_email">
-                        </label>
-                        <label class="form__label">
-                            <input type="phone" class="form__field form__field_phone">
-                        </label>
+                        <div class="form__label-wrapper">
+                            <label for="name" class="form__label">E-MAIL*:</label>
+                            <input type="text" id="name" class="form__field">
+                        </div>
+                        <div class="form__label-wrapper">
+                            <label for="name" class="form__label">ТЕЛЕФОН:</label>
+                            <input type="text" id="name" class="form__field">
+                        </div>
                     </fieldset>
                     <fieldset class="form__fieldset">
-                        <span class="form__legend"><span class="form__legend-text">Комментарий</span></span></span>
-                        <textarea name="" id="" cols="30" rows="10" class="form_textarea"></textarea>
+                        <span class="form__legend"><span class="form__legend-text">КОММЕНТАРИИ</span></span></span>
+                        <textarea name="" id="" cols="30" rows="5" class="form__textarea" placeholder="РАССКАЖИТЕ О ПОВАДКАХ КОТА"></textarea>
                     </fieldset>
-                    <input class="form_submit" type="submit" value="">
-                    <spam class="form__warning"></spam>
+                    <fieldset class="form__fieldset">
+                        <div class="form__label-wrapper">
+                            <input name="sugar" type="checkbox" id="sugar" class="form__checkbox">
+                            <label for="sugar" class="form__check-label"><span class="form__checkbox-icon"></span> САХАРОЗАМЕНИТЕЛЬ</label>
+                        </div>
+                        <div class="form__label-wrapper">
+                            <input name="water" type="checkbox" id="water" class="form__checkbox">
+                            <label for="water" class="form__check-label"><span class="form__checkbox-icon"></span> ПИТЬЕВАЯ ВОДА</label>
+                        </div>
+                        <div class="form__label-wrapper">
+                            <input name="milk" type="checkbox" id="milk" class="form__checkbox">
+                            <label for="milk" class="form__check-label"><span class="form__checkbox-icon"></span> МОЛОКО</label>
+                        </div>
+                        <div class="form__label-wrapper">
+                            <input name="vitamins" type="checkbox" id="vitamins" class="form__checkbox">
+                            <label for="vitamins" class="form__check-label"><span class="form__checkbox"></span> ВИТАМИНЫ</label>
+                        </div>
+                    </fieldset>
+                    <input class="button form__submit" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
+                    <spam class="form__warning">* - Обязательное поле</spam>
                 </form>
             </div>
         </section>

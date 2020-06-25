@@ -2,12 +2,21 @@
     width: 100%;
     font-family: $oswald;
     font-size: 1rem;
+    padding: 2rem 0;
 
     &__fieldset {
         padding: 1.5rem 0;
         margin: 0;
         border: none;
         border-bottom: 1px solid $gray-light;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
     }
 
     &__label-wrapper {
@@ -24,25 +33,9 @@
         margin-right: .5rem;
     }
 
-    &__radio-label {
+    &__check-label {
         display: flex;
         justify-content: center;
-    }
-
-    &__radio-checkbox {
-        position: relative;
-        display: inline-block;
-        height: 1.5rem;
-        width: 1.5rem;
-        margin-right: 1rem;
-        border: 1px solid $gray;
-        border-radius: 50%;
-    }
-
-    &__field {
-        border: 1px solid $gray-light;
-        padding: .5rem;
-        flex-grow: 1;
     }
 
     &__radio {
@@ -60,6 +53,49 @@
             background-color: $green;
             border-radius: 50%;
         }
+    }
+
+    &__radio-icon {
+        position: relative;
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 1rem;
+        border: 1px solid $gray;
+        border-radius: 50%;
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked + label > span:after  {
+            content: "";
+            display: block;
+            height: 1.5rem;
+            width: .75rem;
+            position: absolute;
+            top: 20%;
+            left: 70%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            border-bottom: 1px solid $green;
+            border-right: 1px solid $green;
+        }
+    }
+
+    &__checkbox-icon {
+        position: relative;
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 1rem;
+        border: 1px solid $gray;
+    }
+
+
+    &__field {
+        border: 1px solid $gray-light;
+        padding: .5rem;
+        flex-grow: 1;
     }
 
     &__legend {
@@ -83,5 +119,25 @@
         margin-right: 1.5rem;
     }
 
-    
+    &__textarea {
+        width: 100%;
+        resize: none;
+        padding: 1rem;
+        box-sizing: border-box;
+        font-family: $oswald;
+        font-size: 1rem;
+    }
+
+    &__submit {
+        width: 100%;
+    }
+
+    &__warning {
+        display: block;
+        margin-top: 1rem;
+        font-family: $oswald;
+        font-size: .75rem;
+        color: $black-light;
+        text-align: center;
+    }
 }
