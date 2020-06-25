@@ -98,6 +98,20 @@
         flex-grow: 1;
     }
 
+    &__field_email {
+        padding-right: 3rem;
+        background-image: url("../../public/media/images/mail.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 1rem) center;
+    }
+
+    &__field_phone {
+        padding-right: 3rem;
+        background-image: url("../../public/media/images/phone.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 1rem) center;
+    }
+
     &__legend {
         display: flex;
         align-items: baseline;
