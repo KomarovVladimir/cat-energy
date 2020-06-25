@@ -61,4 +61,27 @@
             border-radius: 50%;
         }
     }
+
+    &__legend {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            border-top: 2px solid $green;
+            flex-grow: 1;
+        }
+    }
+
+    &__legend-text {
+        display: inline-block;
+        max-width: 51%;
+        margin-right: 1.5rem;
+    }
+
+    
 }
