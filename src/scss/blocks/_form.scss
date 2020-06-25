@@ -24,9 +24,41 @@
         margin-right: .5rem;
     }
 
+    &__radio-label {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__radio-checkbox {
+        position: relative;
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 1rem;
+        border: 1px solid $gray;
+        border-radius: 50%;
+    }
+
     &__field {
         border: 1px solid $gray-light;
         padding: .5rem;
         flex-grow: 1;
+    }
+
+    &__radio {
+        display: none;
+
+        &:checked + label > span:after  {
+            content: "";
+            display: block;
+            height: .75rem;
+            width: .75rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $green;
+            border-radius: 50%;
+        }
     }
 }
