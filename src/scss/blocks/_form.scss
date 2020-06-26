@@ -9,6 +9,8 @@
     }
 
     &__subtitle {
+        display: block;
+        width: 100%;
         margin-bottom: 2rem;
     }
 
@@ -19,14 +21,12 @@
         border: none;
     }
 
-    &__container {
+    &__container_bordered {
+        border-top: 1px solid $gray-light;
         border-bottom: 1px solid $gray-light;
+        padding-top: 2rem;
         padding-bottom: 2rem;
-    }
 
-    &__container_borderless {
-        padding-bottom: 0;
-        border: none;
     }
 
     &__label-wrapper {
@@ -166,6 +166,7 @@
         box-sizing: border-box;
         font-family: $oswald;
         font-size: 1rem;
+        border: 1px solid $gray;
     }
 
     &__submit {
@@ -179,5 +180,11 @@
         font-size: .75rem;
         color: $black-light;
         text-align: center;
+    }
+}
+
+@media screen and (min-width: $md) {
+    .form {
+
     }
 }
