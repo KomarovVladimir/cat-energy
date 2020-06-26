@@ -26,7 +26,10 @@
         border-bottom: 1px solid $gray-light;
         padding-top: 2rem;
         padding-bottom: 2rem;
+    }
 
+    &__bordered-wrapper {
+        width: 100%;
     }
 
     &__label-wrapper {
@@ -185,6 +188,25 @@
 
 @media screen and (min-width: $md) {
     .form {
+        &__container_bordered {
+            padding-top: 0;
+            padding-bottom: 0;
+            border: none;
+        }
 
+        &__bordered-wrapper {
+            border: 1px solid $gray-light;
+            padding: 1.5rem;
+        }
+
+        // &__chekboxes {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     flex-wrap: wrap;
+        // }
+
+        // &__checkbox-item {
+        //     width: calc(50% - 2rem);
+        // }
     }
 }

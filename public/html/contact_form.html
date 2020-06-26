@@ -35,7 +35,7 @@
             </div>
             <form action="" class="">
                 <fieldset class="form__fieldset">
-                    <div class="container form__container">
+                    <div class="container">
                         <div class="form__label-wrapper">
                             <label for="name" class="form__label">ИМЯ:*</label>
                             <input type="text" id="name" class="form__field">
@@ -51,7 +51,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="form__fieldset">
-                     <div class="container form__container form__container_bordered">
+                     <div class="container form__container_bordered">
                          <div class="form__bordered-wrapper">
                              <div class="form__label-wrapper">
                                  <input name="type" type="radio" id="diet" class="form__radio">
@@ -69,7 +69,7 @@
                      </div>
                 </fieldset>
                 <fieldset class="form__fieldset form__line">
-                     <div class="container form__container">
+                     <div class="container">
                          <span class="form__legend">Контактные данные (хозяина кота)</span>
                          <div class="form__label-wrapper">
                              <label for="name" class="form__label">E-MAIL:*</label>
@@ -82,30 +82,32 @@
                      </div>
                 </fieldset>
                 <fieldset class="form__fieldset form__line">
-                     <div class="container form__container">
-                         <span class="form__legend">Комментарии</span></span>
+                     <div class="container">
+                         <span class="form__legend">Комментарии</span>
                          <textarea name="" id="" cols="30" rows="5" class="form__textarea" placeholder="РАССКАЖИТЕ О ПОВАДКАХ КОТА"></textarea>
                      </div>
                 </fieldset>
                 <fieldset class="form__fieldset form__line">
-                     <div class="container form__container">
-                        <span class="form__legend">Подробнее</span></span>
-                         <div class="form__label-wrapper">
-                             <input name="sugar" type="checkbox" id="sugar" class="form__checkbox">
-                             <label for="sugar" class="form__check-label"><span class="form__checkbox-icon"></span> САХАРОЗАМЕНИТЕЛЬ</label>
-                         </div>
-                         <div class="form__label-wrapper">
-                             <input name="water" type="checkbox" id="water" class="form__checkbox">
-                             <label for="water" class="form__check-label"><span class="form__checkbox-icon"></span> ПИТЬЕВАЯ ВОДА</label>
-                         </div>
-                         <div class="form__label-wrapper">
-                             <input name="milk" type="checkbox" id="milk" class="form__checkbox">
-                             <label for="milk" class="form__check-label"><span class="form__checkbox-icon"></span> МОЛОКО</label>
-                         </div>
-                         <div class="form__label-wrapper">
-                             <input name="vitamins" type="checkbox" id="vitamins" class="form__checkbox">
-                             <label for="vitamins" class="form__check-label"><span class="form__checkbox-icon"></span> ВИТАМИНЫ</label>
-                         </div>
+                     <div class="container">
+                        <span class="form__legend">Подробнее</span>
+                        <div class="form__checkboxes">
+                            <div class="form__label-wrapper form__checkbox-item">
+                                <input name="sugar" type="checkbox" id="sugar" class="form__checkbox">
+                                <label for="sugar" class="form__check-label"><span class="form__checkbox-icon"></span> САХАРОЗАМЕНИТЕЛЬ</label>
+                            </div>
+                            <div class="form__label-wrapper">
+                                <input name="water" type="checkbox" id="water" class="form__checkbox">
+                                <label for="water" class="form__check-label"><span class="form__checkbox-icon"></span> ПИТЬЕВАЯ ВОДА</label>
+                            </div>
+                            <div class="form__label-wrapper">
+                                <input name="milk" type="checkbox" id="milk" class="form__checkbox">
+                                <label for="milk" class="form__check-label"><span class="form__checkbox-icon"></span> МОЛОКО</label>
+                            </div>
+                            <div class="form__label-wrapper">
+                                <input name="vitamins" type="checkbox" id="vitamins" class="form__checkbox">
+                                <label for="vitamins" class="form__check-label"><span class="form__checkbox-icon"></span> ВИТАМИНЫ</label>
+                            </div>
+                        </div>
                      </div>
                 </fieldset>
                 <input class="button form__submit" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
