@@ -28,8 +28,8 @@
 
     &__bordered-wrapper {
         width: 100%;
-        border-top: 1px solid $gray-light;
-        border-bottom: 1px solid $gray-light;
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
         padding-top: 2rem;
         padding-bottom: 2rem;
         box-sizing: border-box;
@@ -117,7 +117,7 @@
     }
 
     &__field {
-        border: 1px solid $gray-light;
+        border: 1px solid $gray;
         padding: .5rem;
         flex-grow: 1;
     }
@@ -234,7 +234,7 @@
         }
 
         &__bordered-wrapper {
-            border: 1px solid $gray-light;
+            border: 1px solid $gray;
             padding: 1.5rem;
         }
 
@@ -296,6 +296,13 @@
         &__fieldset-item {
             width: calc(50% - 2rem);
             display: inline-block;
+        }
+
+        &__bordered-wrapper {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
         &__checkbox-item {

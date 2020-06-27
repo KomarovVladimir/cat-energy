@@ -104,6 +104,10 @@ const config = {
       filename: 'contact_form.html',
       template: 'public/html/contact_form.html',
     }),
+    new HtmlWebpackPlugin({
+      filename: 'catalog.html',
+      template: 'public/html/catalog.html',
+    }),
     new CopyWebpackPlugin([
       { 
         from: 'public/media/images', 

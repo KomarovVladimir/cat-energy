@@ -33,7 +33,7 @@
                 <h1 class="h1 h1_left form__h1">Подбор программы</h1>
                 <span class="form__subtitle">Заполните анкету и мы подберем  программу питания для вашего кота</span>
             </div>
-            <form action="" class="">
+            <form action="/send">
                 <div class="container form__fieldsets">
                     <fieldset class="form__fieldset form__fieldset-item">
                         <div class="form__label-wrapper">
@@ -71,12 +71,12 @@
                          <span class="form__legend">Контактные данные <span class="form_nowrap">(хозяина кота)</span></span>
                          <div class="form__contacts">
                              <div class="form__label-wrapper form__contacts-item form__email-label">
-                                 <label for="name" class="form__label">E-MAIL:*</label>
-                                 <input type="text" id="name" class="form__field form__field_email">
+                                 <label for="email" class="form__label">E-MAIL:*</label>
+                                 <input type="text" id="email" class="form__field form__field_email">
                              </div>
                              <div class="form__label-wrapper form__contacts-item">
-                                 <label for="name" class="form__label">ТЕЛЕФОН:*</label>
-                                 <input type="text" id="name" class="form__field form__field_phone">
+                                 <label for="phone" class="form__label">ТЕЛЕФОН:*</label>
+                                 <input type="text" id="phone" class="form__field form__field_phone">
                              </div>
                          </div>
                      </div>
@@ -84,7 +84,7 @@
                 <fieldset class="form__fieldset form__line">
                      <div class="container">
                          <span class="form__legend">Комментарии</span>
-                         <textarea name="" id="" cols="30" rows="5" class="form__textarea" placeholder="РАССКАЖИТЕ О ПОВАДКАХ КОТА"></textarea>
+                         <textarea name="comments" id="comments" cols="30" rows="5" class="form__textarea" placeholder="РАССКАЖИТЕ О ПОВАДКАХ КОТА"></textarea>
                      </div>
                 </fieldset>
                 <fieldset class="form__fieldset form__line">
@@ -113,7 +113,7 @@
                 <div class="form__submit-wrapper">
                     <div class="container form__submit-container">
                         <input class="button form__submit" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
-                        <spam class="form__warning">* - Обязательное поле</spam>
+                        <span class="form__warning">* - Обязательное поле</span>
                     </div>
                 </div>
             </form>
