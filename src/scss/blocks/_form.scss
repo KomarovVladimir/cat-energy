@@ -136,19 +136,9 @@
         background-position: calc(100% - 1rem) center;
     }
 
-    &__legend {
-        font-size: 1.25em;
+    &__h4 {
         margin-bottom: 1.5rem;
-    }
-
-    &__legend {
-        display: block;
         max-width: 51%;
-        background-color: $white;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        margin-left: -1rem;
-
     }
 
     &__line {
@@ -158,7 +148,7 @@
             display: block;
             width: 100%;
             border-bottom: 2px solid $green;
-            top: 1.5rem;
+            top: 1.2rem;
             z-index: -1;
         }
     }

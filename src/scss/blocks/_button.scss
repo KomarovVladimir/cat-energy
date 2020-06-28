@@ -10,4 +10,9 @@
     text-align: center;
     text-decoration: none;
     border: none;
+
+    &_gray {
+        color: $black-light;
+        background-color: $gray-light;
+    }
 }
