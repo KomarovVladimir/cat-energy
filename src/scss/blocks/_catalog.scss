@@ -178,11 +178,16 @@
 
 @media screen and (min-width: $sm) {
     .catalog {
+        &__h1 {
+            padding-bottom: 0;
+        }
+
         &__list {
             display: flex;
             flex-wrap: wrap;
             align-items: stretch;
             justify-content: space-between;
+            margin-bottom: 4rem;
         }
 
         &__card {
