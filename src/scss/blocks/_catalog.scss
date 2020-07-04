@@ -66,6 +66,10 @@
         margin: 0;
         border-bottom: 1px solid $gray;
         text-align: left;
+
+        &:first-child {
+            padding-top: 0;
+        }
     }
 
     &__image-wrapper {
@@ -162,6 +166,7 @@
         align-items: center;
         justify-content: center;
         height: 20rem;
+        width: inherit;
         background-image: url("../../public/media/images/gift-photo-mobile.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -329,15 +334,31 @@
             width: calc(25% - 2rem);
         }
 
+        &__list {
+            margin-bottom: 4rem;
+        }
+
         &__list_additional {
-            width: calc(75% - 2rem);
+            width: calc(75% - 1rem);
             margin-right: 2rem;
             margin-bottom: 0;
         }
 
         &__ad {
+            height: auto;
+            flex-direction: column;
+            justify-content: center;
             padding: 0;
-            width: calc(25% - 2rem);
+            width: calc(25% - 1rem);
+            background-position: center;
+
+            &:before {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__ad-text {
+            text-align: center;
         }
 
         &__additional-wrapper {
