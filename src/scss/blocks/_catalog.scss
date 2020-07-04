@@ -53,6 +53,21 @@
 
     }
 
+    &__additional-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__card-additional {
+        width: 100%;
+        padding: 2rem 0;
+        margin: 0;
+        border-bottom: 1px solid $gray;
+        text-align: left;
+    }
+
     &__image-wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -147,7 +162,6 @@
         align-items: center;
         justify-content: center;
         height: 20rem;
-        width: 100%; 
         background-image: url("../../public/media/images/gift-photo-mobile.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -162,7 +176,7 @@
             background-image: url("../../public/media/images/gift.svg");
             background-size: contain;
             background-repeat: no-repeat;
-            background-position-y: 80%;
+            background-position: center;
         }
     }
 
@@ -178,6 +192,12 @@
 
 @media screen and (min-width: $sm) {
     .catalog {
+        &__container {
+            &:after {
+                border-bottom: none;
+            }
+        }
+
         &__h1 {
             padding-bottom: 0;
         }
@@ -186,14 +206,13 @@
             display: flex;
             flex-wrap: wrap;
             align-items: stretch;
-            justify-content: space-between;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
 
         &__card {
             flex-direction: column;
             align-items: center;
-            width: calc(50% - 2rem);
+            width: calc(50% - 1rem);
             margin-top: 6rem;
             margin-bottom: 0;
             padding: 0 2rem 2.5rem 2rem;
@@ -209,6 +228,10 @@
             &:last-child {
                 margin-bottom: 0;
             }
+
+            &:not(:last-child):not(:nth-child(even)) {
+                margin-right: 2rem;
+            }
         }
 
         &__content {
@@ -221,13 +244,23 @@
 
         &__thumbnail {
             width: auto;
-            height: 10rem;
+            max-width: 100%;
+            height: auto;
             margin-top: -2rem;
             margin-bottom: 1rem;
         }
 
         &__name {
             width: auto;
+        }
+
+        &__name_additional {
+            display: inline;
+        }
+
+        &__parameters_additional {
+            display: inline-block;
+            float: right;
         }
 
         &__parameter {
@@ -239,14 +272,83 @@
             }
         }
 
+        &__parameter_additional {
+            display: inline-block;
+            padding-bottom: 0;
+            border: none;
+        }
+
+        &__parameter-name_additional {
+            margin-right: 4rem;
+        }
+
         &__show-more {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            min-height: 20rem;
             width: calc(50% - 2rem);
             padding: 0;
             margin: 6rem 0 0 0;
             border-top: 1px solid $gray;
+        }
+
+        &__ad {
+            flex-direction: row;
+            justify-content: space-between;
+            height: 14rem;
+            padding: 0 25%;
+            background-position-y: 60%; 
+            background-image: url("../../public/media/images/gift-photo-tablet.jpg");
+
+            &:before {
+                height: 6rem;
+                width: 6rem;
+                margin-bottom: 0;
+            }
+        }
+
+        &__ad-text {
+            text-align: left;
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: $md) {
+    .catalog {
+        &__card {
+            width: calc(25% - 2rem);
+
+            &:not(:last-child):not(:nth-child(4n)) {
+                margin-right: 2.666rem;
+            }
+        }
+
+        &__show-more {
+            width: calc(25% - 2rem);
+        }
+
+        &__list_additional {
+            width: calc(75% - 2rem);
+            margin-right: 2rem;
+            margin-bottom: 0;
+        }
+
+        &__ad {
+            padding: 0;
+            width: calc(25% - 2rem);
+        }
+
+        &__additional-wrapper {
+            margin-bottom: 4rem;
+        }
+
+        &__card-additional {
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
         }
     }
 }
