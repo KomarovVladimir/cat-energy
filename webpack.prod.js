@@ -104,7 +104,14 @@ const config = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'public/html/index.html',
-      title: 'Cat Energy'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'contact_form.html',
+      template: 'public/html/contact_form.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'catalog.html',
+      template: 'public/html/catalog.html',
     }),
     new CopyWebpackPlugin([
       { 
