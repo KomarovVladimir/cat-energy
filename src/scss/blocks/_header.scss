@@ -4,11 +4,8 @@
     padding: 1rem 0;
     background-color: $white;
     color: $black;
+    border-bottom: 1px solid $gray-light;
     z-index: 1000;
-
-    &_white {
-        color: $white;
-    }
 
     &__container {
         display: flex;
@@ -80,9 +77,41 @@
 
 @media screen and (min-width: $lg) {
     .header {
+        &_home {
+            position: fixed;
+            width: 100%;
+            background-color: transparent;
+            border-bottom: none;
+            color: $white;
+        }
+
+        &_scrolled {
+            padding: 0.5rem 0;
+            color: $black;
+            background-color: $white;
+            border-bottom: 1px solid $gray-light;
+        }
+
+        &_home &__nav-item {
+            &:hover {
+                &:after {
+                    background-color: $white;
+                }
+            }
+        }
+    
+        &_scrolled &__nav-item {
+            &:hover {
+                &:after {
+                    background-color: $black;
+                }
+            }
+        }
+
+
         // position: fixed;
-        width: 100%;
-        background-color: transparent;
+        // width: 100%;
+        // background-color: transparent;
 
         // &__nav-item {
         //     color: $white;
