@@ -1,3 +1,3 @@
 import "../scss/main.scss";
 
-import "./header"
+import "./header";

@@ -3,9 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-// const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
@@ -119,16 +117,15 @@ const config = {
         to: 'media/images'
       },
     ]),
-    // new webpack.ProvidePlugin({
-    //   $: "jquery",
-    //   jQuery: "jquery",
-    //   "window.jQuery": "jquery",
-    //   "window.$": "jquery"
-    // }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
-    // new BundleAnalyzerPlugin()
+    new TerserPlugin({
+      parallel: true,
+      terserOptions: {
+        ecma: 6,
+      },
+    }),
   ],
   optimization: {
     runtimeChunk: 'single',
@@ -141,7 +138,6 @@ const config = {
         }
       }
     },
-    minimizer: [new UglifyJsPlugin()],
   },
 };
 
