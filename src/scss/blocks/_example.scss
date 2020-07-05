@@ -114,9 +114,19 @@
         padding: 0;
         background: none;
         border: none;
+        outline: none;
         font-family: $oswald;
         font-size: 1rem;
         color: $black;
+        cursor: pointer;
+
+        &:hover {
+            border-bottom: 2px solid $gray;
+        }
+
+        &:active {
+            border-bottom: 2px solid $gray-dark;
+        }
     }
 
     &__label {
@@ -129,6 +139,7 @@
     &__switch {
         position: relative;
         display: inline-block;
+        cursor: pointer;
 
         &:before {
             content: "";

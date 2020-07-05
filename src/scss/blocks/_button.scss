@@ -10,9 +10,27 @@
     text-align: center;
     text-decoration: none;
     border: none;
+    outline: none;
+
+    &:hover {
+        background-color: $green-dark;
+    }
+
+    &:active {
+        color: rgba(255, 255, 255, 0.5);
+    }
 
     &_gray {
         color: $black-light;
         background-color: $gray-light;
+
+        &:hover {
+            background-color: #ebebeb;
+        }
+    
+        &:active {
+            color: $black-light;
+            opacity: .5;
+        }
     }
 }

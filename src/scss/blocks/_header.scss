@@ -20,6 +20,15 @@
 
     &__mobile-logo {
         display: inline-block;
+        transition: .1s ease-in;
+
+        &:hover {
+            opacity: .9;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
     }
 
     &__mobile-button {
@@ -49,6 +58,15 @@
         color: inherit;
         text-decoration: none;
         text-align: center;
+        transition: .1s ease-in;
+
+        &:hover {
+            opacity: .9;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
     }
 
     &__mobile-hidden {
@@ -81,7 +99,7 @@
                     position: absolute;
                     width: 100%;
                     height: 2px;
-                    bottom: -0.5rem;
+                    bottom: 0;
                     left: 0;
                     background-color: $green;
                 }
