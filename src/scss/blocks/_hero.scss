@@ -24,7 +24,7 @@
     &__container {
         display: flex;
         flex-direction: column;
-        padding-top: 2rem;
+        padding-top: 3rem;
     }
 
     &__title {
@@ -73,9 +73,9 @@
         &__container {
             align-items: flex-start;
             min-height: 810px;
-            padding-top: 3rem;
-            margin-left: 7rem;
             min-width: 10rem;
+            padding-top: 3rem;
+            padding-left: 20%;
         }
 
         &__title {
@@ -115,7 +115,7 @@
         &__container {
             justify-content: center;
             padding-top: 0;
-            padding-left: 10%;
+            padding-left: 15%;
         }
 
         &__title {
